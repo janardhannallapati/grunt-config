@@ -7,7 +7,7 @@ var config = require('../config');
 
 module.exports = {
 	
-    <% if (coffee) { %>
+  
         // Compiles CoffeeScript to JavaScript
       dist: {
                 files: [{
@@ -27,5 +27,5 @@ module.exports = {
                     ext: '.js'
                 }]
             }
-    <% } %>
+  
 };

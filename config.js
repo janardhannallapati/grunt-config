@@ -10,7 +10,7 @@ module.exports = {
 	// Project settings
         yeoman: {
             // Configurable paths
-            app: 'app',
+            app: '.',
             dist: 'dist'
         },
 

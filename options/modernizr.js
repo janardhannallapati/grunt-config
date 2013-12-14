@@ -7,7 +7,7 @@ var config = require('../config');
 
 module.exports = {
 	
-  <% if (includeModernizr) { %>
+
         // Generates a custom Modernizr build that includes only the tests you
         // reference in your app
             devFile: '<%%= yeoman.app %>/bower_components/modernizr/modernizr.js',
@@ -18,6 +18,6 @@ module.exports = {
                 '!<%%= yeoman.dist %>/scripts/vendor/*'
             ],
             uglify: true
-        <% } %>
+
 
 };

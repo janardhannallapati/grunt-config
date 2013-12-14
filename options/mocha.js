@@ -7,7 +7,7 @@ var config = require('../config');
 
 module.exports = {
 
-    <% if (testFramework === 'mocha') { %>
+
         // Mocha testing framework configuration options
     
             all: {
@@ -16,7 +16,7 @@ module.exports = {
                     urls: ['http://<%%= connect.test.options.hostname %>:<%%= connect.test.options.port %>/index.html']
                 }
             }
-        <% }%>
+
 	
     
 };
