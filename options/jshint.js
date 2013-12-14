@@ -1,13 +1,18 @@
-/**
- * JSHint taks configuration
- */
+// Make sure code styles are up to par and there are no obvious mistakes
 'use strict';
 
 var config = require('../config');
 
 module.exports = {
-	all: config.jsHintFiles,
 	options: {
-		jshintrc: '.jshintrc'
-	}
+                jshintrc: '.jshintrc',
+                reporter: require('jshint-stylish')
+            },
+            all: [
+                'Gruntfile.js',
+                '<%%= yeoman.app %>/scripts/{,*/}*.js',
+                '!<%%= yeoman.app %>/scripts/vendor/*',
+                'test/spec/{,*/}*.js'
+            ]
 };
+

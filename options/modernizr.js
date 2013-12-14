@@ -6,17 +6,18 @@
 var config = require('../config');
 
 module.exports = {
-	devFile: config.modernizr.src,
-	outputFile: config.modernizr.dest,
+	
+  <% if (includeModernizr) { %>
+        // Generates a custom Modernizr build that includes only the tests you
+        // reference in your app
+            devFile: '<%%= yeoman.app %>/bower_components/modernizr/modernizr.js',
+            outputFile: '<%%= yeoman.dist %>/bower_components/modernizr/modernizr.js',
+            files: [
+                '<%%= yeoman.dist %>/scripts/{,*/}*.js',
+                '<%%= yeoman.dist %>/styles/{,*/}*.css',
+                '!<%%= yeoman.dist %>/scripts/vendor/*'
+            ],
+            uglify: true
+        <% } %>
 
-	extra: {
-		shiv: true,
-		mq: true
-	},
-
-	// Minify
-	uglify: true,
-
-	// Files
-	files: config.js.files.concat(config.sass.files)
 };

@@ -1,9 +1,13 @@
+//Test 
+
+'use strict';
+
+
 /**
  * Configuration for Karma test-runner
  */
-'use strict';
 
-module.exports = {
+
 	options: {
 		configFile: 'karma.conf.js',
 
@@ -58,4 +62,4 @@ module.exports = {
 			]
 		}
 	}
-};
+

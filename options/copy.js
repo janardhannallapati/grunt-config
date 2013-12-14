@@ -6,10 +6,29 @@
 var config = require('../config');
 
 module.exports = {
-	build: {
-		files: [{
-			src: config.js.files,
-			dest: config.destDir
-		}]
-	}
+            dist: {
+                files: [{
+                    expand: true,
+                    dot: true,
+                    cwd: '<%%= yeoman.app %>',
+                    dest: '<%%= yeoman.dist %>',
+                    src: [
+                        '*.{ico,png,txt}',
+                        '.htaccess',
+                        'images/{,*/}*.webp',
+                        'styles/fonts/{,*/}*.*'<% if (compassBootstrap) { %>,
+                        'bower_components/sass-bootstrap/fonts/*.*'<% } %>
+                    ]
+                }]
+            },
+            styles: {
+                expand: true,
+                dot: true,
+                cwd: '<%%= yeoman.app %>/styles',
+                dest: '.tmp/styles/',
+                src: '{,*/}*.css'
+            }
+
+
 };
+
