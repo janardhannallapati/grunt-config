@@ -3,7 +3,7 @@
  */
 'use strict';
 
-var pages = require('../../pages');
+//var pages = require('../../pages');
 
 module.exports = {
 
