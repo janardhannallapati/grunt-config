@@ -1,0 +1,22 @@
+ // Add vendor prefixed styles
+
+'use strict';
+
+var config = require('../config');
+
+module.exports = {
+     options: {
+        browsers: ['last 1 version']
+    },
+    dist: {
+        files: [{
+            expand: true,
+            cwd: '.tmp/styles/',
+            src: '{,*/}*.css',
+            dest: '.tmp/styles/'
+        }]
+    }
+
+
+};
+
