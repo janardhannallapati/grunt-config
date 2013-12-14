@@ -10,16 +10,16 @@ var config = require('../config');
 module.exports = {
 
  server: [
-                'compass:server',<% if (coffee) { %>
-                'coffee:dist',<% } %>
+                'compass:server',
+                'coffee:dist',
                 'copy:styles'
             ],
-            test: [<% if (coffee) { %>
-                'coffee',<% } %>
+            test: [
+                'coffee',
                 'copy:styles'
             ],
-            dist: [<% if (coffee) { %>
-                'coffee',<% } %>
+            dist: [
+                'coffee',
                 'compass',
                 'copy:styles',
                 'imagemin',
