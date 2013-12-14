@@ -7,6 +7,7 @@
  * Configuration for Karma test-runner
  */
 
+module.exports = {
 
 	options: {
 		configFile: 'karma.conf.js',
@@ -63,3 +64,4 @@
 		}
 	}
 
+}
